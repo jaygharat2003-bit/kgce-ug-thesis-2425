@@ -4,7 +4,7 @@
 
 \label{AppendixA} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
 
-\lhead{Appendix A. \emph{Appendix Title Here}} % Change X to a consecutive letter; this is for the header on each page - perhaps a shortened title
+\lhead{Appendix A. \emph{ LoRa-Based Emergency Communication Network}} % Change X to a consecutive letter; this is for the header on each page - perhaps a shortened title
 
 Write your Appendix content here.....These may be provided to include further details of results, mathematical derivations, certain illustrative parts of the program code (e.g., class interfaces), user documentation etc.
 
@@ -12,14 +12,21 @@ Write your Appendix content here.....These may be provided to include further de
 
 \textbf{INTRODUCTION}
 
-The project report should be documented with an engineering approach to the solution of the problem that you have sought to address. The project report should be prepared in order to solve the problem in a methodical and professional manner, making due references to appropriate techniques, technologies and professional standards. You should start the documentation process from the first step of software development so that you can easily identify the issues to be focused upon in the ultimate project report. You should also include the details from your project notebook, in which you would have recorded the progress of your project throughout the course. The project report should contain enough details to enable examiners to evaluate your work. The
-details, however, should not render your project report as boring and tedious. The important points should be highlighted in the body of the report, with details often
-relegated to appendices
+Natural and man-made disasters such as floods, cyclones, earthquakes, landslides, forest fires, and industrial accidents damage the infrastructure that people depend on for communication. Cellular towers lose power or are physically destroyed, fibre and microwave backhaul links are cut, and the networks that survive are often overloaded by the surge in calls and messages. The first hours after a disaster are the most critical for search and rescue, and they are exactly when communication is most likely to be unavailable.
+ Traditional alternatives such as satellite phones, HF/VHF radios, and walkie-talkies have limitations. Satellite phones are expensive and cannot be given to every responder or village. Handheld radios have limited range, offer no location tracking or message logging, and need trained operators. This gap has led to growing interest in low-power wide-area network (LPWAN) technologies for emergency use.
+ LoRa (Long Range) is a radio modulation technique based on chirp spread spectrum (CSS), operating in licence-free sub-GHz ISM bands (865-867 MHz in India, 868 MHz in Europe, 915 MHz in North America). Its key properties are:
+Long range: typically 2-5 km in urban areas and 10-15 km or more in line-of-sight rural terrain
+High link budget and sensitivity: it can decode signals well below the noise floor (down to roughly -137 dBm at high spreading factors) Very low power consumption: nodes can run for months on small batteries when duty-cycled sensibly
+Adjustable data rate: spreading factors (SF7 to SF12) trade speed against range, from a few hundred bps to tens of kbps
+Low cost: modules such as the SX1262 and SX1276 are cheap and widely available
+Licence-free operation: no spectrum fees, subject to regulatory limits on power and bandwidth
+The trade-off is low throughput. LoRa is unsuitable for voice, images, or video, but ideal for short text messages, SOS alerts, GPS coordinates, and sensor telemetry, which are exactly the data that matter most in an emergency.
 
 \textbf{IMPORTANCE OF PROJECT/PROJECT REPORT}
-
-The Mini Project is not only a part of the coursework, but also a mechanism to demonstrate your abilities and specialisation. It provides the opportunity for you to demonstrate originality, teamwork, inspiration, planning and organisation in a software project, and to put into practice some of the techniques you have been taught throughout the previous courses. The Mini Project is important for a number of reasons. It provides students with:
-
+During emergencies, every second counts. Traditional systems fail precisely when they are needed the most, causing panic, delayed rescue operations, and loss of life due to lack of coordination. The purpose of this network is to:
+Ensure Last-Mile Connectivity: Provide a reliable backup channel for isolated communities, remote areas, and disaster zones where cellular signals never reach or have been knocked out.
+Empower First Responders: Give rescue teams an independent tool to coordinate search operations, share victim locations, and broadcast safety alerts without depending on commercial telecom operators.
+Democratize Emergency Comms: Build an affordable, low-cost hardware and software solution that local authorities, NGOs, or communities can easily deploy and maintain without recurring subscription costs.
 \begin{enumerate}
 \item[$\bullet$]opportunity to specialise in specific areas of IT;
 \item[$\bullet$]future employers will most likely ask you about your project at interview;
